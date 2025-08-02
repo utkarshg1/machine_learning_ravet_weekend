@@ -98,6 +98,6 @@ def algorithm_evaluation(
     print(sorted_df.head(1))
 
     # Select best model
-    best_model = res_df.loc[0, "model"]
+    best_model = sorted_df.loc[0, "model"]
 
     return best_model, sorted_df

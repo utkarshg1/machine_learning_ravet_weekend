@@ -8,6 +8,7 @@ dependencies = [
     "ipykernel>=6.29.5",
     "joblib>=1.5.0",
     "jupyter>=1.1.1",
+    "kneed>=0.8.5",
     "matplotlib>=3.10.3",
     "numpy>=2.2.5",
     "pandas>=2.2.3",

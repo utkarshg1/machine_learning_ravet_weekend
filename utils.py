@@ -41,6 +41,10 @@ def evaluate_single_model(
     xtest: pd.DataFrame,
     ytest: pd.Series,
 ) -> dict:
+    # Cross validation on xtrain
+    scores = cross_val_score(model, xtrain, ytrain, cv=5, scoring="f1_macro")
+    f1_cv = scores.mean()
+
     # Fit the model on train data
     model.fit(xtrain, ytrain)
 
@@ -51,10 +55,6 @@ def evaluate_single_model(
     # Calculate f1 score on train and test
     f1_train = f1_score(ytrain, ypred_train, average="macro")
     f1_test = f1_score(ytest, ypred_test, average="macro")
-
-    # Cross validation on xtrain
-    scores = cross_val_score(model, xtrain, ytrain, cv=5, scoring="f1_macro")
-    f1_cv = scores.mean()
 
     # Extract model name
     name = type(model).__name__

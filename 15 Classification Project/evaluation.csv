@@ -1,0 +1,17 @@
+model_name,model,f1_train,f1_test,f1_cv
+LogisticRegression,LogisticRegression(random_state=42),0.9314,0.9255,0.931
+RandomForestClassifier,RandomForestClassifier(random_state=42),0.9978,0.9268,0.9302
+HistGradientBoostingClassifier,HistGradientBoostingClassifier(random_state=42),0.9329,0.9232,0.9288
+XGBClassifier,"XGBClassifier(base_score=None, booster=None, callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device=None, early_stopping_rounds=None,
+              enable_categorical=False, eval_metric=None, feature_types=None,
+              feature_weights=None, gamma=None, grow_policy=None,
+              importance_type=None, interaction_constraints=None,
+              learning_rate=None, max_bin=None, max_cat_threshold=None,
+              max_cat_to_onehot=None, max_delta_step=None, max_depth=4,
+              max_leaves=None, min_child_weight=None, missing=nan,
+              monotone_constraints=None, multi_strategy=None, n_estimators=None,
+              n_jobs=None, num_parallel_tree=None, ...)",0.9395,0.9253,0.9284
+DecisionTreeClassifier,DecisionTreeClassifier(random_state=42),0.9978,0.8725,0.8761
+LogisticRegression,"LogisticRegression(class_weight='balanced', random_state=42)",0.7909,0.7941,0.7903
